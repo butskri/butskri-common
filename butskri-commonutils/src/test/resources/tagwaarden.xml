@@ -1,0 +1,11 @@
+<mainTag>
+	<subTag1>Value not to be visible</subTag1>
+	<subTag2>Value not to be visible</subTag2>
+	<mySubTag>
+		<tagToBeFound>Dit is de waarde die ik wil vinden</tagToBeFound>
+		<tagToBeFound>Nog een waarde die ik wil vinden</tagToBeFound>
+		<tagNotToBeFound>Deze waarde wil ik niet vinden</tagNotToBeFound>
+	</mySubTag>
+	<tagToBeFound>Hopelijk wordt deze waarde ook gevonden</tagToBeFound>
+	<tagNotToBeFound>Deze waarde wil ik ook niet vinden</tagNotToBeFound>
+</mainTag>

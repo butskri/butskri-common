@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<bean class="be.butskri.commons.infrastructure.PropertyConfiguration">
+		<property name="baseNames">
+			<list>
+				<value>property-configuration-test</value>
+				<value>onbestaand</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="beanMetWaardeVanSystemProperty" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${systemProperty}" />
+	</bean>
+	
+	<bean id="beanMetEnvironmentSpecifiekeWaardeUitApplicationDir" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${environmentSpecifiekePropertyUitApplicationDir}" />
+	</bean>
+	
+	<bean id="beanMetApplicationDirWaarde" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${applicationDirProperty}" />
+	</bean>
+	
+	<bean id="beanMetEnvironmentSpecifiekePropertyOpClasspath" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${environmentSpecifiekePropertyOpClasspath}" />
+	</bean>
+	
+	<bean id="beanMetPropertyOpClasspath" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${propertyOpClasspath}" />
+	</bean>
+	
+	<bean id="beanMetOnbestaandeProperty" class="be.butskri.commons.infrastructure.MyBean" >
+		<property name="propertyValue" value="${onbestaandeProperty}" />
+	</bean>
+</beans>
