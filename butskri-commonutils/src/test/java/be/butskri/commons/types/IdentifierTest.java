@@ -1,13 +1,14 @@
 package be.butskri.commons.types;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
-import be.butskri.commons.test.JUnit4ButskriClassRunner;
-
-@RunWith(JUnit4ButskriClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class IdentifierTest {
 
 	private static final Long ID = 15l;

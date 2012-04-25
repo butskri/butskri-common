@@ -1,18 +1,26 @@
 package be.butskri.commons.types;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.internal.runners.ExpectedExceptionRule;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
 import be.butskri.commons.exception.ButskriRuntimeException;
-import be.butskri.commons.test.JUnit4ButskriClassRunner;
 import be.butskri.commons.test.junit.ExpectedThrowable;
 
-@RunWith(JUnit4ButskriClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class BedragTest {
+	
+	@Rule
+	public ExpectedExceptionRule expectedExceptionRule = new ExpectedExceptionRule();
 
 	@Test
 	public void constructorRondWaardeAfTotOpTweeCijfersNaDeKomma() {

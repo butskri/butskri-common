@@ -3,10 +3,10 @@ package be.butskri.commons.test;
 import java.util.Properties;
 
 import org.junit.Test;
-import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
-@RunWith(JUnit4ClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class BaseAssertTest {
 
 	private static final String PROPERTY1 = "prop1";

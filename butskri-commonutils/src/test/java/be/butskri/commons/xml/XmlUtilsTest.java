@@ -6,11 +6,11 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
 import be.butskri.commons.test.BaseAssert;
-import be.butskri.commons.test.JUnit4ButskriClassRunner;
 
-@RunWith(JUnit4ButskriClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class XmlUtilsTest {
 
 	private static final String WAARDE1 = "Dit is de waarde die ik wil vinden";

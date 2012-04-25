@@ -9,13 +9,14 @@ import java.util.Locale;
 import org.apache.commons.lang.LocaleUtils;
 import org.junit.Before;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.internal.runners.MockitoRule;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 import org.mockito.MockitoAnnotations.Mock;
 
-import be.butskri.commons.test.JUnit4ButskriClassRunner;
-
-@RunWith(JUnit4ButskriClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class LanguageBeanTest {
 
 	private static final Locale NL_BE = LocaleUtils.toLocale("nl_BE");
@@ -23,6 +24,9 @@ public class LanguageBeanTest {
 	private static final Locale FR_BE = LocaleUtils.toLocale("fr_BE");
 	private static final Locale FR = LocaleUtils.toLocale("fr");
 
+	@Rule
+	public MockitoRule mockitoRule = new MockitoRule();
+	
 	@Mock
 	private LocaleResolver localeResolverMock;
 	@Mock

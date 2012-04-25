@@ -24,7 +24,6 @@ public class Locator implements ApplicationContextAware {
 		return getInstance().locateIt(clazz);
 	}
 
-	@SuppressWarnings("unchecked")
 	protected <T> T locateIt(Class<T> clazz) {
 		Map<String, T> beansOfType = applicationContext.getBeansOfType(clazz);
 

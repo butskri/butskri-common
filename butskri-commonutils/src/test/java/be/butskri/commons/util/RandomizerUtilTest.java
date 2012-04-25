@@ -1,18 +1,18 @@
 package be.butskri.commons.util;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
-import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
 import be.butskri.commons.test.BaseAssert;
 import be.butskri.commons.types.Bedrag;
 
-@RunWith(JUnit4ClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class RandomizerUtilTest {
 
 	private static final int AANTAL = 100;

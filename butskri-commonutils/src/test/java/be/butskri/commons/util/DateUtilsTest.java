@@ -1,19 +1,27 @@
 package be.butskri.commons.util;
 
-import static be.butskri.commons.test.DateAssert.*;
-import static org.junit.Assert.*;
+import static be.butskri.commons.test.DateAssert.assertDatum;
+import static be.butskri.commons.test.DateAssert.assertGeenMilliseconden;
+import static be.butskri.commons.test.DateAssert.assertMiddernacht;
+import static be.butskri.commons.test.DateAssert.assertTijd;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.internal.runners.ExpectedExceptionRule;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 
 import be.butskri.commons.exception.ButskriRuntimeException;
-import be.butskri.commons.test.JUnit4ButskriClassRunner;
 import be.butskri.commons.test.junit.ExpectedThrowable;
 
-@RunWith(JUnit4ButskriClassRunner.class)
+@RunWith(BlockJUnit4ClassRunner.class)
 public class DateUtilsTest {
+
+	@Rule
+	public ExpectedExceptionRule expectedExceptionRule = new ExpectedExceptionRule();
 
 	@Test
 	public void parseDateZetDatumMetSlashesOmNaarDateObject() {
